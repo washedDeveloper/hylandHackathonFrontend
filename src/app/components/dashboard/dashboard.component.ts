@@ -11,11 +11,12 @@ export class DashboardComponent implements OnInit {
   constructor(private userService: UserService) { }
   name: string;
   qotd = "live, laugh, love ;)";
+  search: string;
   ngOnInit() {
     this.name = this.userService.getUserName();
   }
   SearchGoogle() {
-    const url = 'https://www.google.com/{{search}}';
+    const url = 'https://www.google.com/search?q=' + this.search;
     window.open(url, '_blank');
   }
 }
