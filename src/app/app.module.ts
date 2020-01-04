@@ -11,13 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material.module';
 import { UserService } from './services/user.service';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './components/navbar/navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
     NotesComponent,
     ChatComponent,
-    SettingsComponent
+    SettingsComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
