@@ -1,6 +1,12 @@
 *{
   margin:0;
 }
+nb-layout-column{
+  padding:0 !important;
+}
+router-outlet{
+  height:100%;
+}
 main{
   display: flex;
   height:100%;
@@ -233,4 +239,7 @@ background-color:rgb(60, 64, 67);
   color: white;
   padding-top: -10px;
   padding-bottom: 10px;
+}
+.nb-layout-column{
+  padding:0 !important;
 }

@@ -12,6 +12,9 @@ import { DemoMaterialModule } from './material.module';
 import { UserService } from './services/user.service';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { NbChatModule } from '@nebular/theme';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +29,11 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
-    FormsModule
+    FormsModule,
+    NbThemeModule.forRoot({ name: 'dark' }),
+    NbLayoutModule,
+    NbEvaIconsModule,
+    NbChatModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

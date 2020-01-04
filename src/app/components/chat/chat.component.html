@@ -1,1 +1,20 @@
-<p>chat works!</p>
+
+
+<div id="chat-Container">
+
+
+  <nb-chat title="Classroom Chat">
+    <nb-chat-message *ngFor="let msg of messages"
+                     [type]="msg.type"
+                     [message]="msg.message"
+                     [reply]="msg.reply"
+                     [sender]="msg.sender"
+                     [avatar]="msg.avatar">
+  </nb-chat-message>
+
+  <nb-chat-form (send)="sendMessage($event)" [dropFiles]="true">
+  </nb-chat-form>
+  </nb-chat>
+
+
+</div>

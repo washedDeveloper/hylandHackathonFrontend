@@ -18,6 +18,9 @@ export class UserService {
     this.myUser.schedule.sort((a, b) => (+(a.Period)) - (+(b.Period)) );
     return this.myUser;
   }
+  getClassByID(id){
+    return this.myUser.schedule.find(element => element.ClassName === id);
+  }
 
   mockUserData() {
     const benSchedule = new Array<Classroom>(5);
