@@ -1,15 +1,16 @@
 <div id="body">
-<div id="Greeting">
-  <h1 id="nameGreeting">Hello {{name}}</h1>
-  <h3 id="qotd">{{qotd}}</h3>
-</div>
-<div id="searchBox"> <input type="text"> <button (click)="SearchGoogle()"></button></div>
-
-
-<div id="widgetHolder">
-
-  <div id="assignments"></div>
-  <div id="updates"></div>
-  <div id="shortcuts"></div>
-</div>
+  <div id="Header">
+    <div id="Greeting">
+      <h1 id="nameGreeting">Hello {{ name }}</h1>
+      <h3 id="qotd">{{ qotd }}</h3>
+    </div>
+    <div id="searchBox">
+      <input [(ngModel)]="search" type="text" size="30" placeholder="Search.."/> <button (click)="SearchGoogle()"><i class="fa fa-search"></i></button>
+    </div>
+  </div>
+  <div id="widgetHolder">
+    <div id="assignments"></div>
+    <div id="updates"></div>
+    <div id="shortcuts"></div>
+  </div>
 </div>

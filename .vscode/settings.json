@@ -1,0 +1,9 @@
+{
+    "files.exclude": {
+        "**.js": true,
+        "**.spec.ts": true,
+        "e2e/": true,
+        "node_modules/": true
+    },
+    "files.autoSave": "afterDelay"
+}
