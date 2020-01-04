@@ -47,15 +47,16 @@
         </div>
         <div id="dots">
           <a><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-        </div>
-      </div>
-      <a id="3-dots" [matMenuTriggerFor]="menu"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-      <mat-menu #menu="matMenu">
+          <mat-menu #menu="matMenu">
         <mat-checkbox checked>Google</mat-checkbox>
         <mat-checkbox>Quizlet</mat-checkbox>
         <mat-checkbox>Kahn Academy</mat-checkbox>
         <mat-checkbox>Wikipedia</mat-checkbox>
       </mat-menu>
+        </div>
+      </div>
+      <a id="3-dots" [matMenuTriggerFor]="menu"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+
     </header>
     <main>
       <div id="schedule">
@@ -77,13 +78,20 @@
           <h2>Asignments</h2>
           <div></div>
           <mat-list>
-            <mat-list-item *ngFor="let asignment of SelectedClass.Asignments"></mat-list-item>
+            <mat-list-item *ngFor="let asignment of SelectedClass.Asignments">
+              <h1>{{asignment.Title}}</h1>
+              <p>{{asignment.Description}}</p>
+              <p>{{asignment.DueDate}}</p>
+            </mat-list-item>
           </mat-list>
         </div>
         <div id="Links">
           <h2>Links</h2>
           <mat-list>
-            <mat-list-item *ngFor="let link of SelectedClass.Links"></mat-list-item>
+            <mat-list-item *ngFor="let link of SelectedClass.Links">
+              <h4>{{link.Name}}</h4>
+              <p>{{link.Url}}</p>
+            </mat-list-item>
           </mat-list>
         </div>
       </div>

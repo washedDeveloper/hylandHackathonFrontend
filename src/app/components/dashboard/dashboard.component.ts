@@ -12,11 +12,12 @@ import { Classroom } from 'src/app/models/classroom';
 export class DashboardComponent implements OnInit {
   constructor(private userService: UserService, private userClasses: UserClassesService) {}
   user: User;
-
+  search: string;
   SelectedClass: Classroom;
 
   ngOnInit() {
     this.user = this.userService.getUser();
+    this.SelectedClass = this.user.schedule[0];
  }
   SearchGoogle() {
     const url = 'https://www.google.com/search?q=' + this.search;
