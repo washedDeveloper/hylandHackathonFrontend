@@ -15,6 +15,7 @@ import { SettingsComponent } from './components/settings/settings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material.module';
 import { UserService } from './services/user.service';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +33,8 @@ import { UserService } from './services/user.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DemoMaterialModule
+    DemoMaterialModule,
+    FormsModule
   ],
   providers: [UserService],
   bootstrap: [AppComponent]

@@ -15,7 +15,7 @@ export class DashboardComponent implements OnInit {
     this.name = this.userService.getUserName();
   }
   SearchGoogle() {
-
+    const url = 'https://www.google.com/{{search}}';
+    window.open(url, '_blank');
   }
-
 }
