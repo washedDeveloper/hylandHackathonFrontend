@@ -15,6 +15,7 @@ export class UserService {
   }
 
   getUser() {
+    this.myUser.schedule.sort((a, b) => (+(a.Period)) - (+(b.Period)) );
     return this.myUser;
   }
 

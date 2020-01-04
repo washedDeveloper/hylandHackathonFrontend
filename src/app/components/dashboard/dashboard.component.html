@@ -1,100 +1,63 @@
-<main>
-  <div id="navbar">
-    <div id="userProfile">
-      <div id="imgHolder">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png"
-          width="50px" />
+<div id="main-content-m">
+
+
+  <header>
+    <div id="boxButton">
+      <div id="inputBox">
+        <input [(ngModel)]="search" type="text" id="input" placeholder="Search..." />
       </div>
-      <div id="textHolder">
-        <h2>Hello</h2>
-        <h3>Bay High School</h3>
-      </div>
-    </div>
-    <div id="pageSelector">
-      <a>
-        <p><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</p>
-      </a>
-      <a>
-        <p><i class="fa fa-sticky-note" aria-hidden="true"></i>Notes</p>
-      </a>
-      <a>
-        <p><i class="fa fa-commenting" aria-hidden="true"></i>Chat</p>
-      </a>
-
-      <div id="chatChild">
-        <a><span class="big">—</span>Spanish 204</a>
-        <a *ngFor="let class of user.schedule"> <span class="big">—</span></a>
-      </div>
-
-      <a>
-        <p><i class="fa fa-clock-o" aria-hidden="true"></i>Study-Timer</p>
-      </a>
-
-
-      <a id="settings">
-        <p ><i class="fa fa-cog" aria-hidden="true"></i>Settings</p>
-      </a>
-    </div>
-  </div>
-  <div id="main-content">
-    <header>
-      <div id="boxButton">
-        <div id="inputBox">
-          <input [(ngModel)]="search" type="text" id="input" placeholder="Search..." />
-        </div>
-        <div id="mag">
+      <div id="mag">
         <a (click)="SearchGoogle()"><button><i class="fa fa-search" aria-hidden="true"></i></button></a>
-        </div>
-        <div id="dots">
-          <a><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
-          <mat-menu #menu="matMenu">
-        <mat-checkbox checked>Google</mat-checkbox>
-        <mat-checkbox>Quizlet</mat-checkbox>
-        <mat-checkbox>Kahn Academy</mat-checkbox>
-        <mat-checkbox>Wikipedia</mat-checkbox>
-      </mat-menu>
-        </div>
       </div>
-      <a id="3-dots" [matMenuTriggerFor]="menu"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+      <div id="dots">
+        <a><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+        <mat-menu #menu="matMenu">
+          <mat-checkbox checked>Google</mat-checkbox>
+          <mat-checkbox>Quizlet</mat-checkbox>
+          <mat-checkbox>Kahn Academy</mat-checkbox>
+          <mat-checkbox>Wikipedia</mat-checkbox>
+        </mat-menu>
+      </div>
+    </div>
+    <a id="3-dots" [matMenuTriggerFor]="menu"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
 
-    </header>
-    <main>
-      <div id="schedule">
-        <h1 id="mainTitle">Schedule</h1>
-        <div id="shh">
-          <div id="scheduleHolder">
-            <div id="one-block">1st Block: Spanish 204</div>
-            <div id="two-block">2nd Block: Math 118</div>
-            <div id="three-a-block">3a: Writing Seminar</div>
-            <div id="three-b-block">Lunch</div>
-            <div id="three-c-block">3c: Honors Band</div>
-            <div id="four-block">4th Block: Physics 305</div>
-          </div>
+  </header>
+  <main>
+    <div id="schedule">
+      <h1 id="mainTitle">Schedule</h1>
+      <div id="shh">
+        <div id="scheduleHolder">
+          <div id="one-block">1st Block: {{user.schedule[0].ClassName}}</div>
+          <div id="two-block">2nd Block: {{user.schedule[1].ClassName}}</div>
+          <div id="three-a-block">3a: {{user.schedule[2].ClassName}}</div>
+          <div id="three-b-block">Lunch</div>
+          <div id="three-c-block">3c: {{user.schedule[3].ClassName}}</div>
+          <div id="four-block">4th Block: {{user.schedule[4].ClassName}}</div>
         </div>
       </div>
-      <div id="bottom-main">
-        <!--  *ngIf="SelectedClass != null" -->
-        <div id="asignments">
-          <h2>Asignments</h2>
-          <div></div>
-          <mat-list>
-            <mat-list-item *ngFor="let asignment of SelectedClass.Asignments">
-              <h1>{{asignment.Title}}</h1>
-              <p>{{asignment.Description}}</p>
-              <p>{{asignment.DueDate}}</p>
-            </mat-list-item>
-          </mat-list>
-        </div>
-        <div id="Links">
-          <h2>Links</h2>
-          <mat-list>
-            <mat-list-item *ngFor="let link of SelectedClass.Links">
-              <h4>{{link.Name}}</h4>
-              <p>{{link.Url}}</p>
-            </mat-list-item>
-          </mat-list>
-        </div>
+    </div>
+    <div id="bottom-main">
+      <!--  *ngIf="SelectedClass != null" -->
+      <div id="asignments">
+        <h2>Asignments</h2>
+        <div></div>
+        <mat-list>
+          <mat-list-item *ngFor="let asignment of SelectedClass.Asignments">
+            <h1>{{asignment.Title}}</h1>
+            <p>{{asignment.Description}}</p>
+            <p>{{asignment.DueDate}}</p>
+          </mat-list-item>
+        </mat-list>
       </div>
-    </main>
-  </div>
-</main>
+      <div id="Links">
+        <h2>Links</h2>
+        <mat-list>
+          <mat-list-item *ngFor="let link of SelectedClass.Links">
+            <h4>{{link.Name}}</h4>
+            <p>{{link.Url}}</p>
+          </mat-list-item>
+        </mat-list>
+      </div>
+    </div>
+  </main>
+</div>
