@@ -12,6 +12,5 @@ export class ApiService {
       new Classroom('123', 'bayv11', 'science101', '1', 'mr.Bish'),
       new Classroom('124', 'bayv11', 'science102', '4', 'mr.Hyland')
     ];
-   
   }
 }

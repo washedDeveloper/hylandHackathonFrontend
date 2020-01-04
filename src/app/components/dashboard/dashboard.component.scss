@@ -18,13 +18,65 @@ main{
   align-items: center;
   background-color: #3C4043;
 }
+#imgHolder{
+  border-radius: 100%;
+  border:2px black solid;
+  margin:10px;
+}
+#textHolder{
+  padding-left:5px;
+  h2{
+    font-size: 24px;
+  }
+  h3{
+    font-size: 12px;
+    color:lightgray;
+  }
+}
 #pageSelector{
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   color: lightgray;
-  align-content: flex;
   font-size: 30px;
+  width:100%;
+  height:100%;
+  a{
+    display:block;
+    width:100%;
+  }
+  i{
+    padding-right:5px;
+  }
+  p{
+    cursor:pointer;
+    padding-top:15px;
+    padding-bottom:15px;
+    padding-left:10px;
+    width:100%;
+  }
+  p:hover{
+    background-color: #3C4043;
+  }
+  #settings{
+    align-self: flex-end;
 }
 
+}
+.big{
+  font-size: 42px;
+  padding-left:20px;
+  padding-right: 10px;
+  font-weight: bold;
+  vertical-align:middle;
+}
+#chatChild a {
+font-size: 20px;
+vertical-align:middle;
+cursor:pointer
+}
+#chatChild a:hover {
+  background-color: #3C4043;
+}
 
 header{
   height:60px;
@@ -83,7 +135,7 @@ header{
 #three-a-block {
   height: 50px;
   width: 500px;
-  background-color: rgb(0, 255, 157);
+  background-color: rgb(14, 185, 120);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +151,7 @@ header{
 #three-c-block {
   height: 50px;
   width: 500px;
-  background-color: rgb(0, 174, 255);
+  background-color: rgb(1, 115, 168);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +159,7 @@ header{
 #four-block {
   height: 75px;
   width: 500px;
-  background-color: rgb(255, 0, 149);
+  background-color: rgb(255, 36, 164);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { UserClassesService } from 'src/app/services/user-classes.service';
+import { User } from 'src/app/models/user';
+import { Classroom } from 'src/app/models/classroom';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,13 +11,13 @@ import { UserClassesService } from 'src/app/services/user-classes.service';
 })
 export class DashboardComponent implements OnInit {
   constructor(private userService: UserService, private userClasses: UserClassesService) {}
-  name: string;
-  search: string;
-  qotd = 'live, laugh, love ;)';
+  user: User;
+
+  SelectedClass: Classroom;
+
   ngOnInit() {
-    this.name = this.userService.getUserName();
-    this.userClasses.setCurrentClass(null);
-  }
+    this.user = this.userService.getUser();
+ }
   SearchGoogle() {
     const url = 'https://www.google.com/search?q=' + this.search;
     window.open(url, '_blank');

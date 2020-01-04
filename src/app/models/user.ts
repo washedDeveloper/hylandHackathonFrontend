@@ -1,3 +1,5 @@
+import { Classroom } from './classroom';
+
 export class User {
   UserID: string;
   Username: string;
@@ -5,4 +7,5 @@ export class User {
   Name: string;
   Email: string;
   SchoolID: string;
+  schedule: Classroom[];
 }
