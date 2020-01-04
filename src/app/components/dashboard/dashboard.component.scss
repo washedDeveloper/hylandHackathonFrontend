@@ -20,6 +20,9 @@ main{
 }
 #pageSelector{
   display: inline-block;
+  color: lightgray;
+  align-content: flex;
+  font-size: 30px;
 }
 
 
@@ -31,6 +34,18 @@ header{
 }
 #main-content{
   width:100%;
+}
+
+#schedule {
+
+  text-align: center;
+  align-items: center;
+}
+#shh{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 #scheduleHolder{
 
@@ -60,7 +75,7 @@ header{
 
 #inputBox {
   flex-direction: column;
-  width: calc(100% - 60px);
+  width: calc(100% - 500px);
   border-radius: 26px;
   box-shadow:rgba(0, 0, 0, 0.15) 0px 1px 5px 0px, rgba(0, 0, 0, 0.1) 0px 4px 4px 0px, rgba(0, 0, 0, 0.08) 0px -0.1px 3px 0px;
   padding-bottom:6px;

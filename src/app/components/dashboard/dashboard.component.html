@@ -2,28 +2,44 @@
   <div id="navbar">
     <div id="userProfile">
       <div id="imgHolder">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png" width="50px">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1024px-User_icon_2.svg.png"
+          width="50px"
+        />
       </div>
       <div id="textHolder">
         <h2>Hello</h2>
         <h3>Bay High School</h3>
       </div>
-
     </div>
     <div id="pageSelector">
-    <a><p><i></i>Dashboard</p></a>
-    <a><p><i></i>Notes</p></a>
-      <a><p><i></i>Chat</p></a>
-    <div id="chatChild">
-      <a *ngFor="let class of classes"></a>
+      <a
+        ><p><i class="fa fa-tachometer" aria-hidden="true"></i>Dashboard</p></a
+      >
+      <a
+        ><p><i class="fa fa-sticky-note" aria-hidden="true"></i>Notes</p></a
+      >
+      <a
+        ><p><i class="fa fa-commenting" aria-hidden="true"></i>Chat</p></a
+      >
+
+      <div id="chatChild">
+        <a *ngFor="let class of classes"></a>
+      </div>
+
+      <a
+        ><p><i class="fa fa-clock-o" aria-hidden="true"></i>Study-Timer</p></a
+      >
+      <a id="settings"
+        ><p><i class="fa fa-cog" aria-hidden="true"></i>Settings</p></a
+      >
     </div>
-    <a><p><i></i>Study-Timer</p></a>
-      <a><p><i></i>Settings</p></a>
-</div>
   </div>
-  <div id=main-content>
+  <div id="main-content">
     <header>
-      <div id="inputBox"><input type="text" id="input" placeholder="Search..."></div>
+      <div id="inputBox">
+        <input type="text" id="input" placeholder="Search..." />
+      </div>
       <a id="3-dots" [matMenuTriggerFor]="menu"> </a>
       <mat-menu #menu="matMenu">
         <mat-checkbox checked>Google</mat-checkbox>
@@ -31,19 +47,19 @@
         <mat-checkbox>Kahn Academy</mat-checkbox>
         <mat-checkbox>Wikipedia</mat-checkbox>
       </mat-menu>
-
     </header>
     <main>
-
       <div id="schedule">
         <h1>Schedule</h1>
-        <div id="scheduleHolder">
-          <div id="one-block"></div>
-          <div id="two-block"></div>
-          <div id="three-a-block"></div>
-          <div id="three-b-block"></div>
-          <div id="three-c-block"></div>
-          <div id="four-block"></div>
+        <div id="shh">
+          <div id="scheduleHolder">
+            <div id="one-block"></div>
+            <div id="two-block"></div>
+            <div id="three-a-block"></div>
+            <div id="three-b-block"></div>
+            <div id="three-c-block"></div>
+            <div id="four-block"></div>
+          </div>
         </div>
       </div>
       <div id="bottom-main">
