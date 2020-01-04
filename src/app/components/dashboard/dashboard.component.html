@@ -37,8 +37,16 @@
   </div>
   <div id="main-content">
     <header>
-      <div id="inputBox">
-        <input type="text" id="input" placeholder="Search..." />
+      <div id="boxButton">
+        <div id="inputBox">
+          <input [(ngModel)]="search" type="text" id="input" placeholder="Search..." />
+        </div>
+        <div id="mag">
+        <a (click)="SearchGoogle()"><button><i class="fa fa-search" aria-hidden="true"></i></button></a>
+        </div>
+        <div id="dots">
+          <a><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a>
+        </div>
       </div>
       <a id="3-dots" [matMenuTriggerFor]="menu"> </a>
       <mat-menu #menu="matMenu">
@@ -50,15 +58,15 @@
     </header>
     <main>
       <div id="schedule">
-        <h1>Schedule</h1>
+        <h1 id="mainTitle">Schedule</h1>
         <div id="shh">
           <div id="scheduleHolder">
-            <div id="one-block"></div>
-            <div id="two-block"></div>
-            <div id="three-a-block"></div>
-            <div id="three-b-block"></div>
-            <div id="three-c-block"></div>
-            <div id="four-block"></div>
+            <div id="one-block">1st Block: Spanish 204</div>
+            <div id="two-block">2nd Block: Math 118</div>
+            <div id="three-a-block">3a: Writing Seminar</div>
+            <div id="three-b-block">Lunch</div>
+            <div id="three-c-block">3c: Honors Band</div>
+            <div id="four-block">4th Block: Physics 305</div>
           </div>
         </div>
       </div>

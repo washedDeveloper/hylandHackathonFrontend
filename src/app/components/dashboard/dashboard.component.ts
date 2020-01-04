@@ -10,10 +10,15 @@ import { UserClassesService } from 'src/app/services/user-classes.service';
 export class DashboardComponent implements OnInit {
   constructor(private userService: UserService, private userClasses: UserClassesService) {}
   name: string;
+  search: string;
   qotd = 'live, laugh, love ;)';
   ngOnInit() {
     this.name = this.userService.getUserName();
     this.userClasses.setCurrentClass(null);
   }
-  SearchGoogle() {}
+  SearchGoogle() {
+    const url = 'https://www.google.com/search?q=' + this.search;
+    window.open(url, '_blank');
+
+  }
 }
