@@ -7,11 +7,8 @@ import { User } from '../models/user';
 export class UserService {
   myUser: User;
   constructor() { }
-  getUserName(): string {
-    return 'bob';
-    return this.myUser.Name;
-  }
-  getClasses() {
 
+  getUser() {
+    return this.myUser;
   }
 }
