@@ -8,7 +8,10 @@ export class UserService {
   myUser: User;
   constructor() { }
   getUserName(): string {
-    return "bob";
+    return 'bob';
     return this.myUser.Name;
+  }
+  getClasses() {
+
   }
 }

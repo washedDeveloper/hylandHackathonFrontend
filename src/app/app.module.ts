@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ClassDashboardComponent } from './components/class/class-dashboard/class-dashboard.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CalendarComponent } from './components/class/calendar/calendar.component';
@@ -20,7 +19,6 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     DashboardComponent,
-    SidenavComponent,
     ClassDashboardComponent,
     CalendarComponent,
     IssuesComponent,
