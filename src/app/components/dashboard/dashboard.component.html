@@ -43,9 +43,10 @@
         <div></div>
         <mat-list>
           <mat-list-item *ngFor="let asignment of SelectedClass.Asignments">
-              <h1 class="className">{{asignment.Title}}</h1>
-              <p class="asignDes">{{asignment.Description}}</p>
-              <p class="dueDate">{{asignment.DueDate}}</p>
+            <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+            <h1 class="asignTitle">{{asignment.Title}}</h1>
+            <p class="asignDes">{{asignment.Description}}</p>
+            <p class="asignDue">{{asignment.DueDate}}</p>
           </mat-list-item>
         </mat-list>
       </div>
@@ -53,8 +54,9 @@
         <h2>Links</h2>
         <mat-list>
           <mat-list-item *ngFor="let link of SelectedClass.Links">
-            <h4>{{link.Name}}</h4>
-            <p>{{link.Url}}</p>
+            <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+            <h4 class="linkName">{{link.Name}}</h4>
+            <p class="linkUrl">{{link.Url}}</p>
           </mat-list-item>
         </mat-list>
       </div>

@@ -120,7 +120,7 @@ header{
 #one-block {
   height: 75px;
   width: 500px;
-  background-color: purple;
+  background-color: #AB64CA;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -128,7 +128,7 @@ header{
 #two-block {
   height: 75px;
   width: 500px;
-  background-color: rgb(157, 255, 0);
+  background-color: #36D000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,7 +144,7 @@ header{
 #three-b-block {
   height: 25px;
   width: 500px;
-  background-color: rgb(8, 20, 8);
+  background-color: #B49910;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -207,17 +207,26 @@ background-color:rgb(60, 64, 67);
 
 }
 
-
-.className {
-  font-size: 20px;
-  border: solid;
-  margin: 5px;
+.asignTitle {
+  font-size: 15px;
+  color: gray;
 }
 .asignDes {
-  border: solid;
+  text-align: center;
+  margin-left: -10px;
+  margin-right: 10px;
+  color: gray;
 }
-.dueDate {
-  border: solid;
+.asignDue {
+  color: gray;
+}
+.linkName {
+  font-size: 15px;
+  color: gray;
+}
+.linkUrl {
+  margin-left: 10px;
+  color: gray;
 }
 
 #boxbutton {
