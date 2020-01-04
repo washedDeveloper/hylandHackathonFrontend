@@ -76,12 +76,11 @@
         <!--  *ngIf="SelectedClass != null" -->
         <div id="asignments">
           <h2>Asignments</h2>
-          <div></div>
           <mat-list>
             <mat-list-item *ngFor="let asignment of SelectedClass.Asignments">
-              <h1>{{asignment.Title}}</h1>
-              <p>{{asignment.Description}}</p>
-              <p>{{asignment.DueDate}}</p>
+              <h1 class="className">{{asignment.Title}}</h1>
+              <p class="asignDes">{{asignment.Description}}</p>
+              <p class="dueDate">{{asignment.DueDate}}</p>
             </mat-list-item>
           </mat-list>
         </div>

@@ -205,13 +205,21 @@ background-color:rgb(60, 64, 67);
 
 }
 
-#asignments, #Links {
-  padding-right: 200px;
-  padding-left: 200px;
+
+.className {
+  font-size: 20px;
+  border: solid;
+  margin: 5px;
+}
+.asignDes {
+  border: solid;
+}
+.dueDate {
+  border: solid;
 }
 
 #boxbutton {
-  display:flex;
+  display: flex;
   flex-direction: row;
   justify-content: center;
 }
