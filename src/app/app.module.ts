@@ -14,6 +14,7 @@ import { ChatComponent } from './components/class/chat/chat.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DemoMaterialModule } from './material.module';
+import { UserService } from './services/user.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import { DemoMaterialModule } from './material.module';
     BrowserAnimationsModule,
     DemoMaterialModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
