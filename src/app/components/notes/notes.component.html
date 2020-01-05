@@ -1,1 +1,14 @@
-<p>notes works!</p>
+<div id='notesSectionContainer'>
+
+    <h1 id="noteHeader">Notes</h1>
+    <mat-tab-group>
+      <div *ngFor="let note of notes">
+      <mat-tab label="{{note.Title}}">
+        <textarea class="textarea">
+
+        </textarea>
+      </mat-tab>
+    </div>
+    </mat-tab-group>
+
+</div>

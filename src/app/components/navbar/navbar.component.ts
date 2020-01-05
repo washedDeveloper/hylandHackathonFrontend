@@ -20,6 +20,7 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit() {
     this.user = this.userService.getUser();
+    console.log(this.user);
     this.SelectedClass = this.user.schedule[0];
  }
  chat(id?) {

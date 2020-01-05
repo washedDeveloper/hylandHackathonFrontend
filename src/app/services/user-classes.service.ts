@@ -7,7 +7,7 @@ import { ApiService } from './api/api.service';
 })
 export class UserClassesService {
 
-  constructor(private api: ApiService) {this.classes =  this.api.getClasses(); }
+  constructor(private api: ApiService) { }
 
   classes: Classroom[];
   currentClass: Classroom;
@@ -20,5 +20,8 @@ export class UserClassesService {
   }
   getClassList(): Classroom[] {
     return this.classes;
+  }
+  async run() {
+    console.log(await this.api.getData());
   }
 }

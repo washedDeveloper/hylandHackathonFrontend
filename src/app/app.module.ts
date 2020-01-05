@@ -15,6 +15,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { NbChatModule } from '@nebular/theme';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,6 +30,7 @@ import { NbChatModule } from '@nebular/theme';
     AppRoutingModule,
     BrowserAnimationsModule,
     DemoMaterialModule,
+    HttpClientModule,
     FormsModule,
     NbThemeModule.forRoot({ name: 'dark' }),
     NbLayoutModule,

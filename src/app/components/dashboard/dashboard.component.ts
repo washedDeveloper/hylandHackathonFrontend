@@ -18,10 +18,14 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.user = this.userService.getUser();
     this.SelectedClass = this.user.schedule[0];
+    this.userClasses.run();
  }
   SearchGoogle() {
     const url = 'https://www.google.com/search?q=' + this.search;
     window.open(url, '_blank');
+
+  }
+  run(){
 
   }
 }
